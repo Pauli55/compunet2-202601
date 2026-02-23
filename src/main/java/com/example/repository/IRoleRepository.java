@@ -7,6 +7,6 @@ import com.example.model.Roles;
 public interface IRoleRepository {
     List<Roles> findAll();
     Optional<Roles> findById(Integer id);
-    Roles save(Roles roles);
+    Roles save(Roles role);
     boolean delete(Integer id);
 }
