@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.example.repository.IUserRepository;
 import org.springframework.stereotype.Repository;
 
 import com.example.model.User;
@@ -13,7 +14,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
 @Repository
-public class UserRepository {
+public class UserRepository implements IUserRepository {
     
     private List<User> users = new ArrayList<User>();
     private int nextId = 1;

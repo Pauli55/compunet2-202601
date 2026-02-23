@@ -3,6 +3,7 @@ package com.example.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.example.repository.IUserRepository;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +14,9 @@ import com.example.repository.impl.UserRepository;
 // @Scope("request")
 public class UserService {
     
-    private UserRepository userRepository;
+    private IUserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(IUserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
