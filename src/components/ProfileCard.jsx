@@ -1,18 +1,22 @@
 import { Button, Card, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ProfileCard({ name, description, likes }) {
     console.log("Componente pintandose!");
-    const [likesCounter, setLikesCounter] = useState(likes);
+    const [likesCounter, setLikesCounter] = useState(0);
     // let likesCounter = likes;
 
     const increaseLikes = () => {
         console.log("He dado like!");
-        setLikesCounter(prev => prev + 1);
-        setLikesCounter(prev => prev + 2);
-        setLikesCounter(prev => prev + 3);
+        setLikesCounter(0);
+        setLikesCounter(1);
+        setLikesCounter(2);
         console.log(likesCounter);
     };
+
+    useEffect(() => {
+        console.log("Likes cambiaron! Useffect");
+    }, [likesCounter]);
 
     return (
         <Card
